@@ -9,6 +9,8 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Button} from 'react-native';
 var SendIntentAndroid = require('react-native-send-intent');
+import SplashScreen from 'react-native-splash-screen';
+
 
 
 const instructions = Platform.select({
@@ -21,6 +23,10 @@ const instructions = Platform.select({
 export class Intro extends Component {
     constructor(props){
         super(props)
+    }
+    componentDidMount(){
+      SplashScreen.hide()
+
     }
     render() {
         return (

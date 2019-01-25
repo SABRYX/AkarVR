@@ -39,6 +39,7 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		1734FF7C4B84464481AB3510 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EFD73A235E4D4381B98067 /* libRNGestureHandler.a */; };
 		C6B511180F7A4A27B3021432 /* libRNUnityView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75D7AE3786544F8ADFE3D9B /* libRNUnityView.a */; };
+		5BEC072BA38B4925A0288C25 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CACCD80C4344D9BE858889 /* libSplashScreen.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -348,6 +349,8 @@
 		16EFD73A235E4D4381B98067 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		ADF46FB064F549B488A987E1 /* RNUnityView.xcodeproj */ = {isa = PBXFileReference; name = "RNUnityView.xcodeproj"; path = "../node_modules/react-native-unity-view/ios/RNUnityView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		E75D7AE3786544F8ADFE3D9B /* libRNUnityView.a */ = {isa = PBXFileReference; name = "libRNUnityView.a"; path = "libRNUnityView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		DD8CB06C1A3C4EE8B02D5A8C /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; name = "SplashScreen.xcodeproj"; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		73CACCD80C4344D9BE858889 /* libSplashScreen.a */ = {isa = PBXFileReference; name = "libSplashScreen.a"; path = "libSplashScreen.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +380,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				1734FF7C4B84464481AB3510 /* libRNGestureHandler.a in Frameworks */,
 				C6B511180F7A4A27B3021432 /* libRNUnityView.a in Frameworks */,
+				5BEC072BA38B4925A0288C25 /* libSplashScreen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +569,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				A51AB52E5C7842D88CB7F85C /* RNGestureHandler.xcodeproj */,
 				ADF46FB064F549B488A987E1 /* RNUnityView.xcodeproj */,
+				DD8CB06C1A3C4EE8B02D5A8C /* SplashScreen.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1194,11 +1199,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-unity-view/ios",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 			};
 			name = Debug;
@@ -1222,11 +1229,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-unity-view/ios",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 			};
 			name = Release;
@@ -1251,6 +1260,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-unity-view/ios",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 			};
 			name = Debug;
@@ -1274,6 +1284,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-unity-view/ios",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 			};
 			name = Release;
@@ -1305,11 +1316,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-unity-view/ios",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 			};
 			name = Debug;
@@ -1341,11 +1354,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-unity-view/ios",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 			};
 			name = Release;
@@ -1376,11 +1391,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-unity-view/ios",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 			};
 			name = Debug;
@@ -1411,11 +1428,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-unity-view/ios",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 			};
 			name = Release;
