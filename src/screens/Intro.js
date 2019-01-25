@@ -8,6 +8,8 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Button} from 'react-native';
+var SendIntentAndroid = require('react-native-send-intent');
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -26,7 +28,7 @@ export class Intro extends Component {
             <Text style={styles.welcome}>Welcome to React Native!</Text>
             <Text style={styles.instructions}>To get started, edit App.js</Text>
             <Text style={styles.instructions}>{instructions}</Text>
-            <Button title="Go to VR" onPress={()=>{this.props.navigation.navigate('MainVr')}}></Button>
+            <Button title="Go to VR" onPress={()=>{SendIntentAndroid.openApp('com.Abdullah.floorBuildingGVR').then((wasOpened) => {});}}></Button>
         </View>
         );
     }
