@@ -12,6 +12,8 @@ import {
 var SendIntentAndroid = require("react-native-send-intent");
 import SplashScreen from "react-native-splash-screen";
 import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
+import Icon from "react-native-vector-icons/AntDesign";
+var SendIntentAndroid = require("react-native-send-intent");
 
 export class Intro extends Component {
   static navigationOptions = {
@@ -28,7 +30,7 @@ export class Intro extends Component {
     };
   }
   componentDidMount() {
-    SplashScreen.hide();
+    setTimeout(function() { SplashScreen.hide(); }, 3000);
   }
   componentWillMount() {
     navigator.geolocation.getCurrentPosition(
@@ -59,13 +61,63 @@ export class Intro extends Component {
           source={require("../assets/AASTL.png")}
           style={styles.renderBuildingInfoImage}
         />
-        <View>
-          <Text style={{fontSize:10,fontWeight:'700',color:'black'}}>{"arab academy for science and technology".toLocaleUpperCase()} </Text>
-        </View>
-        <View>
-          <TouchableOpacity>
-            <Icon/>
-          </TouchableOpacity>
+        <View style={{ width: width - 100, marginTop: 10 }}>
+          <Text style={{ fontSize: 14, fontWeight: "700", color: "black" }}>
+            {"arab academy for science and technology".toLocaleUpperCase()}{" "}
+          </Text>
+          <Text
+            style={{ fontSize: 10, fontWeight: "300", color: "grey" }}
+            numberOfLines={2}
+          >
+            Over five years (from 1991 to 1996), the educational and maritime
+            training services were funded by the Egyptian Ministry of Transport.
+            Consequently, in 1992, the AASTMT was granted the most modern
+            training ship, "Aida 4", as a donation from the Japanese government.
+            In 1994 the AASTMT was awarded the most modern simulator in the
+            world (completed in two phases) from the USA administration.
+            Cooperation with the American counterpart continued to found an
+            advanced technology center. Scholarships have exceeded 120,000 for
+            students from 58 countries.
+          </Text>
+          <View
+            style={{
+              flex: 1,
+              flexDirection: "row",
+              justifyContent: "space-around",
+              marginTop: 10
+            }}
+          >
+            <View>
+              <TouchableOpacity
+                style={{ alignItems: "center" }}
+                onPress={() => {
+                  SendIntentAndroid.openApp("com.Abdullah.BuildingGVR").then(
+                    wasOpened => {
+                      console.log(wasOpened);
+                    }
+                  );
+                }}
+              >
+                <Icon name="logout" size={40} color="#3FB97C" />
+              </TouchableOpacity>
+              <Text>Outside View</Text>
+            </View>
+            <View>
+              <TouchableOpacity
+                style={{ alignItems: "center" }}
+                onPress={() => {
+                  SendIntentAndroid.openApp("com.Abdullah.FloorGVR").then(
+                    wasOpened => {
+                      console.log(wasOpened);
+                    }
+                  );
+                }}
+              >
+                <Icon name="login" size={40} color="#3FB97C" />
+              </TouchableOpacity>
+              <Text>Inner View</Text>
+            </View>
+          </View>
         </View>
       </View>
     );
